@@ -1,9 +1,11 @@
 clear
 
-New Circuit.feeder_1
+!New Circuit.feeder_1
 
 !Edit Vsource.Source BasekV=11 pu=1.00  ISC3=3000  ISC1=2500
-~ basekv=11 pu=1.00 MVAsc1=1e6 MVAsc3=1e6
+!~ basekv=11 pu=1.00 MVAsc1=1e6 MVAsc3=1e6
+
+New Circuit.ENWL BasekV=11 pu=1.00 ISC3=3000 ISC1=2500
 
 Redirect LineCode.txt
 !Redirect LoadShapes.txt
@@ -13,7 +15,7 @@ Redirect Loads2.txt
 !Redirect Monitors.txt
 
 
-Set VoltageBases = "11, 0.416, 0.23"
+Set VoltageBases = "11, 0.416"
 CalcVoltageBases
 
 ! Set up time series parameters
